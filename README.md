@@ -292,6 +292,12 @@ $ git push origin main
 
 > git branch [ branch_name ]
 
+<br/>
+
+브랜치 생성과 동시에 이동을 원할 때 `-c` 옵션을 사용한다.
+
+> git switch -c [ branch_name ]
+
 <br/><br/><br/>
 
 
