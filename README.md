@@ -13,6 +13,8 @@
   * [Git Remote 업데이트 하기](#Git-Remote-업데이트-하기)
   * [Git 브랜치 스테이징 하기](#Git-브랜치-스테이징-하기)
   * [Git 커밋하기](#Git-커밋하기)
+  * [Git 커밋 내역 삭제하기](#Git-커밋-내역-삭제하기)
+  * [Git 커밋 내역만 돌아가기](#Git-커밋-내역만-돌아가기)
   * [Git 브랜치 삭제하기](#Git-브랜치-삭제하기)
   * [Git 브랜치 강제 삭제하기](#Git-브랜치-강제-삭제하기)
 * [GitHub](#GitHub)
@@ -229,6 +231,41 @@ $ git commit -m "- commit message"
  create mode 100644 d.txt
  create mode 100644 e.txt
 ```
+
+<br/><br/><br/>
+
+
+
+## Git 커밋 내역 삭제하기
+
+Git에서 변경된 사항을 삭제하거나  
+어느 기점으로 돌아갈 때  
+그 기쩜 이후의 커밋들을 모두 삭제한다.  
+
+* 옵션
+  * --hard
+    * 변경된 사항을 모두 폐기처분 한다.
+  * --mixed
+    * 변경된 사항을 unstage로 남긴다.
+  * --soft
+    * 변경된 사항을 stage로 남긴다.
+
+> git reset [ --hard, --mixed, --soft ] [ hash ]
+
+<br/><br/><br/>
+
+
+
+## Git 커밋 내역만 돌아가기
+
+Git에서 변경된 사항 기점으로 돌아간다.  
+이 때 메시지는 `'-Revert ~~~` 로 표기 되며,  
+변경 사항 이후의 커밋들은 건들지 않는다.  
+
+옵션으로 `--no--commit (-n)` 을 주면  
+해당 기점의 변경 파일이 스테이지 단계로 보존된다.
+
+> git revert [ --no--commit( -n ) ] [ hash ]
 
 <br/><br/><br/>
 
