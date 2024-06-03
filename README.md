@@ -218,7 +218,7 @@ Changes to be committed:
 
 Git에 스테이징(저장)된 데이터를 커밋한다.
 
-> git commit -m "< message >"
+> git commit -m "[ message ]"
 
 ```shell
 # 스테이징(저장)된 정보를 커밋한다.
@@ -236,7 +236,7 @@ $ git commit -m "- commit message"
 
 ## GitHub에 푸쉬하기
 
-> git push origin [remote_branch]
+> git push origin [ remote_branch ]
 
 ```shell
 $ git push origin main
@@ -251,7 +251,7 @@ $ git push origin main
 로컬 깃 브랜치를 삭제한다.  
 로컬 브랜치가 원격 브랜치에 푸시 및 병합이 되어 있어야 삭제가 된다.
 
-> git branch -d < branch-name >
+> git branch -d [ branch-name ]
 
 ```shell
 # -d --delete
@@ -267,7 +267,7 @@ $ git branch -d feature/project
 
 로컬 깃 브랜치를 강제로 삭제한다. ( force )
 
-> git branch -D < branch-name >
+> git branch -D [ branch-name ]
 
 ```shell
 # -D
@@ -289,7 +289,7 @@ $ git branch -D feature/project
 
 원격 브랜치를 삭제한다.
 
-> git push origin -d < branch-name >
+> git push origin -d [ branch-name ]
 
 ```shell
 $ git push origin -d feature/project 
