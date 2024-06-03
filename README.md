@@ -8,6 +8,7 @@
 * [Link](#Link)
 * [Git](#Git)
   * [Git 기본 정보 설정하기](#Git-기본-정보-설정하기)
+  * [Git 프로젝트 생성하기](#Git-프로젝트-생성하기)
   * [Git 상태 확인하기](#Git-상태-확인하기)
   * [Git Remote 업데이트 하기](#Git-Remote-업데이트-하기)
   * [Git 브랜치 스테이징 하기](#Git-브랜치-스테이징-하기)
@@ -58,8 +59,44 @@ Git 초기 생성시 master 브랜치가 아닌 main 브랜치로 생성되도�
 
 > git config --global init.defaultBranch main
 
+<br/><br/><br/>
+
+
+
+## Git 프로젝트 생성하기
+
+최초 Git 프로젝트를 생성하는 방법이다.
+
+> git init
+
+```text
+# git_project 디렉토리 생성
+$ mkdir git_project
+
+# 생성한 git_project 디렉토리 이동
+$ cd git_project
+
+# 내부 확인
+git_project$ ls -al
+total 0
+drwxr-xr-x   2 admin  staff   64  6  3 14:20 .
+drwxr-xr-x  26 admin  staff  832  6  3 14:20 ..
+
+# git 최초 설정
+git_project$ git init
+git init                                                      ✔
+Initialized empty Git repository in /Path/.git/
+
+# 내부 .git 디렉토리 확인
+git_project$ ls -al
+drwxr-xr-x   3 admin  staff   96  6  3 14:23 .
+drwxr-xr-x  26 admin  staff  832  6  3 14:20 ..
+drwxr-xr-x   9 admin  staff  288  6  3 14:23 .gi
+```
+
 
 <br/><br/><br/>
+
 
 
 ## Git 상태 확인하기
