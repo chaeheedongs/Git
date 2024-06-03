@@ -15,6 +15,9 @@
   * [Git 커밋하기](#Git-커밋하기)
   * [Git 커밋 내역 삭제하기](#Git-커밋-내역-삭제하기)
   * [Git 커밋 내역만 돌아가기](#Git-커밋-내역만-돌아가기)
+  * [Git 브랜치 생성하기](#Git-브랜치-생성하기)
+  * [Git 브랜치 이동하기](#Git-브랜치-이동하기)
+  * [Git 브랜치 이름 바꾸기](#Git-브랜치-이름-바꾸기)
   * [Git 브랜치 삭제하기](#Git-브랜치-삭제하기)
   * [Git 브랜치 강제 삭제하기](#Git-브랜치-강제-삭제하기)
 * [GitHub](#GitHub)
@@ -278,6 +281,39 @@ Git에서 변경된 사항 기점으로 돌아간다.
 ```shell
 $ git push origin main
 ```
+
+<br/><br/><br/>
+
+
+
+## Git 브랜치 생성하기
+
+현재 브랜치를 기준으로 브랜치를 생성한다.
+
+> git branch [ branch_name ]
+
+<br/><br/><br/>
+
+
+
+## Git 브랜치 이동하기
+
+현재 브랜치에서 다른 브랜치로 변경한다.  
+이 때 수정하고 있는 파일이나 수정된 파일이 있다면  
+해당 작업을 마무리 해 주어야 한다.
+
+> git checkout [ branch_name ]  
+> git switch [ branch_name ]
+
+<br/><br/><br/>
+
+
+
+## Git 브랜치 이름 바꾸기
+
+현재 브랜치의 이름을 변경한다.
+
+> git branch -m [ branch_name ]
 
 <br/><br/><br/>
 
