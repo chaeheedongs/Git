@@ -7,13 +7,15 @@
 ## Index
 * [Link](#Link)
 * [Git](#Git)
-  * [git 상태 확인하기](#git-상태-확인하기)
-  * [git 브랜치 스테이징 하기](#git-브랜치-스테이징-하기)
-  * [git 커밋하기](#git-커밋하기)
-  * [git 브랜치 삭제하기](#git-브랜치-삭제하기)
-  * [git 브랜치 강제 삭제하기](#git-브랜치-강제-삭제하기)
+  * [Git 기본 정보 설정하기](#Git-기본-정보-설정하기)
+  * [Git 상태 확인하기](#Git-상태-확인하기)
+  * [Git Remote 업데이트 하기](#Git-Remote-업데이트-하기)
+  * [Git 브랜치 스테이징 하기](#Git-브랜치-스테이징-하기)
+  * [Git 커밋하기](#Git-커밋하기)
+  * [Git 브랜치 삭제하기](#Git-브랜치-삭제하기)
+  * [Git 브랜치 강제 삭제하기](#Git-브랜치-강제-삭제하기)
 * [GitHub](#GitHub)
-  * [github 브랜치 삭제하기](#github-브랜치-삭제하기)
+  * [GitHub 브랜치 삭제하기](#Github-브랜치-삭제하기)
 ---
 
 <br/><br/><br/>
@@ -37,10 +39,32 @@
 <br/><br/>
 
 
+## Git 기본 정보 설정하기
 
-## git 상태 확인하기
+Git에 대한 설정 리스트를 확인 할 수 있다.
 
-로컬 git의 변경 사항 및 상태등을 확인할 수 있다.
+> git config --global --list
+
+<br/>
+
+Git 이름과 메일 등록하기
+
+> git config --global user.name [name]  
+> git config --global user.email [email]
+
+<br/>
+
+Git 초기 생성시 master 브랜치가 아닌 main 브랜치로 생성되도록 설정하기
+
+> git config --global init.defaultBranch main
+
+
+<br/><br/><br/>
+
+
+## Git 상태 확인하기
+
+로컬 Git의 변경 사항 및 상태등을 확인할 수 있다.
 
 > git status
 
@@ -92,11 +116,21 @@ Changes to be committed:
 
 
 
-## git 브랜치 스테이징 하기
+## Git Remote 업데이트 하기
 
-로컬에 변경 및 추가된 내용을 git에 스테이징(저장)한다.
+GitHub에 있는 프로젝트 히스토리를 업데이트 한다.
 
-> git add < file >  
+> git remote update
+
+<br/><br/><br/>
+
+
+
+## Git 브랜치 스테이징 하기
+
+로컬에 변경 및 추가된 내용을 Git에 스테이징(저장)한다.
+
+> git add [file]  
 > git add .
 
 ```shell
@@ -114,7 +148,7 @@ drwxr-xr-x 1 admin 197121 0 Jan  2 11:19 .git/
 -rw-r--r-- 1 admin 197121 0 Dec 20 11:25 d.txt
 -rw-r--r-- 1 admin 197121 0 Jan  2 11:25 e.txt
 
-# git 상태 확인
+# Git 상태 확인
 $ git status
 
 On branch master
@@ -129,7 +163,7 @@ Untracked files:
 # e.txt 스테이징(저장) 하기
 $ git add .
 
-# git 상태 확인
+# Git 상태 확인
 $ git status
 
 On branch master
@@ -143,9 +177,9 @@ Changes to be committed:
 
 
 
-## git 커밋하기
+## Git 커밋하기
 
-git에 스테이징(저장)된 데이터를 커밋한다.
+Git에 스테이징(저장)된 데이터를 커밋한다.
 
 > git commit -m "< message >"
 
@@ -163,19 +197,19 @@ $ git commit -m "- commit message"
 
 
 
-## github에 푸쉬하기
+## GitHub에 푸쉬하기
 
-> git push origin < remote_branch >
+> git push origin [remote_branch]
 
 ```shell
-$ git push origin master
+$ git push origin main
 ```
 
 <br/><br/><br/>
 
 
 
-## git 브랜치 삭제하기
+## Git 브랜치 삭제하기
 
 로컬 깃 브랜치를 삭제한다.  
 로컬 브랜치가 원격 브랜치에 푸시 및 병합이 되어 있어야 삭제가 된다.
@@ -214,7 +248,7 @@ $ git branch -D feature/project
 
 
 
-## github 브랜치 삭제하기
+## GitHub 브랜치 삭제하기
 
 원격 브랜치를 삭제한다.
 
