@@ -17,6 +17,7 @@
   * [Git 커밋 내역만 돌아가기](#Git-커밋-내역만-돌아가기)
   * [Git 브랜치 생성하기](#Git-브랜치-생성하기)
   * [Git 브랜치 이동하기](#Git-브랜치-이동하기)
+  * [Git 브랜치 합치기](#Git-브랜치-합치기)
   * [Git 브랜치 이름 바꾸기](#Git-브랜치-이름-바꾸기)
   * [Git 브랜치 삭제하기](#Git-브랜치-삭제하기)
   * [Git 브랜치 강제 삭제하기](#Git-브랜치-강제-삭제하기)
@@ -310,6 +311,28 @@ $ git push origin main
 
 > git checkout [ branch_name ]  
 > git switch [ branch_name ]
+
+<br/><br/><br/>
+
+
+
+## Git 브랜치 합치기
+
+Git 브랜치를 합치는 방법은 두 가지가 존재한다.
+* merge
+* rebase
+
+<br/>
+
+merge는 현재 브랜치를 기준으로 다른 브랜치를 가져온다.
+
+> git merge [ branch_name ]
+
+<br/>
+
+rebase는 현재 브랜치 커밋들을 다른 브랜치에 그대로 추가한다.
+
+> git rebase [ target_branch_name ]
 
 <br/><br/><br/>
 
