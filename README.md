@@ -25,6 +25,7 @@
   * [Git 브랜치 강제 삭제하기](#Git-브랜치-강제-삭제하기)
 * [GitHub](#GitHub)
   * [GitHub 로컬 Git 연동하기](#GitHub-로컬-Git-연동하기)
+  * [GitHub 로컬 Git branch 생성하기](#GitHub-로컬-Git-branch-생성하기)
   * [GitHub 브랜치 삭제하기](#Github-브랜치-삭제하기)
 ---
 
@@ -432,6 +433,27 @@ $ git push -u origin main
 <br/><br/><br/>
 
 
+
+## GitHub 로컬 Git branch 생성하기
+
+로컬 프로젝트에서 GitHub의 특정 브랜치를 기준으로  
+브랜치를 생성하여 GitHub에 추가하는 방법이다.  
+
+```shell
+## 혹시 몰라 GitHub Repo와 내용을 업데이트 한다.
+# Update Git Repository
+$ git remote update
+# Update Git Remote fetch
+$ git fetch
+
+# 특정(target) 브랜치를 기준으로 새 브랜치 생성
+$ git checkout -b new_branch target_branch
+
+# 브랜치를 GitHub에 추가
+$ git push origin new_brach
+```
+
+<br/><br/><br/>
 
 ## GitHub 브랜치 삭제하기
 
