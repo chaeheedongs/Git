@@ -24,6 +24,7 @@
   * [Git 브랜치 삭제하기](#Git-브랜치-삭제하기)
   * [Git 브랜치 강제 삭제하기](#Git-브랜치-강제-삭제하기)
 * [GitHub](#GitHub)
+  * [GitHub 로컬 Git 연동하기](#GitHub-로컬-Git-연동하기)
   * [GitHub 브랜치 삭제하기](#Github-브랜치-삭제하기)
 ---
 
@@ -410,6 +411,25 @@ $ git branch -D feature/project
 ## GitHub
 
 <br/><br/>
+
+
+
+## GitHub 로컬 Git 연동하기
+
+로컬 프로젝트에 Git을 연동한 다음  
+GitHub 홈페이지에서 로컬 Git 프로젝트를 연동하는 방법이다.  
+
+```shell
+# Local Git
+$ git init
+$ git add .
+$ git commit -m '- init'
+$ git branch -M main
+$ git remote add origin https://~~~.git
+$ git push -u origin main
+```
+
+<br/><br/><br/>
 
 
 
