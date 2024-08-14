@@ -23,6 +23,10 @@
   * [Git 브랜치 이름 바꾸기](#Git-브랜치-이름-바꾸기)
   * [Git 브랜치 삭제하기](#Git-브랜치-삭제하기)
   * [Git 브랜치 강제 삭제하기](#Git-브랜치-강제-삭제하기)
+  * [Git 스테시 저장하기](#Git-스테시-저장하기)
+  * [Git 스테시 확인하기](#Git-스테시-확인하기)
+  * [GIt 스테시 불러오기](#Git-스테시-불러오기)
+  * [Git 스테시 삭제하기](#Git-스테시-삭제하기)
 * [GitHub](#GitHub)
   * [GitHub 로컬 Git 연동하기](#GitHub-로컬-Git-연동하기)
   * [GitHub 로컬 Git branch 생성하기](#GitHub-로컬-Git-branch-생성하기)
@@ -403,6 +407,75 @@ $ git branch -d feature/project
 # -D
 # Shortcut for --delete --force.
 $ git branch -D feature/project
+```
+
+<br/><br/><br/>
+
+
+
+## Git 스테시 저장하기
+
+작업중인 내용을 임시 저장한다.  
+작업중이다가 브랜치를 이동할 때 유용하다.
+
+> git stash save [ stash-name ]
+
+```shell
+# 작업 중인 내용을 임시 저장한다.
+$ git stash
+$ git stash save 'hello save'
+Saved working directory and index state WIP on main: d9d025f - message
+```
+
+<br/><br/><br/>
+
+
+
+## Git 스테시 확인하기
+
+임시 저장된 내역을 확인한다.
+
+> git stash list
+
+```shell
+# 임시 저장한 리스트를 확인한다.
+$ git stash list
+stash@{0}: WIP on main: d9d025f - message
+stash@{1}: WIP on main: d9d025f - message
+```
+
+<br/><br/><br/>
+
+
+
+## Git 스테시 불러오기
+
+임시 저장된 내역을 불러온다.
+
+> git stash [ apply | pop ]
+
+```shell
+# 임시 저장된 내역을 불러온다. (스테시 남아있음)
+$ git stash apply stash@{0}
+
+# 임시 저장된 내역을 불러온다. (스테시에서 사라짐)
+$ git stash pop
+```
+
+<br/><br/><br/>
+
+
+
+## Git 스테시 삭제하기
+
+임시 저장된 내역을 삭제한다.
+
+> git stash drop [ stash@{index} ]
+
+```shell
+# 임시 저장된 내역 중 특정 내역 삭제하기
+$ git stash drop stash@{0}
+Dropped refs/stash@{0} (1bd4a40acd17c6100620fd060c926900a18ab4d4)
 ```
 
 <br/><br/><br/>
