@@ -31,6 +31,7 @@
   * [GitHub 로컬 Git 연동하기](#GitHub-로컬-Git-연동하기)
   * [GitHub 로컬 Git branch 생성하기](#GitHub-로컬-Git-branch-생성하기)
   * [GitHub 브랜치 삭제하기](#Github-브랜치-삭제하기)
+  * [GitHub branch 이름 변경하기](#GitHub-branch-이름-변경하기)
 ---
 
 <br/><br/><br/>
@@ -536,6 +537,20 @@ $ git push origin new_brach
 
 ```shell
 $ git push origin -d feature/project 
+```
+
+<br/><br/><br/>
+
+## GitHub branch 이름 변경하기
+
+Local Git 브랜치명을 변경한 후에  
+원격 리포지토리 브랜치명을 변경한다.
+
+> git push origin :old_branch new_branch
+
+```shell
+$ git branch -m [new branch name]
+$ git push origin [:old_branch new_branch]
 ```
 
 <br/><br/><br/>
